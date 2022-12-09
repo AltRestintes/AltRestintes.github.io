@@ -1,6 +1,24 @@
-<p class="codepen" data-height="300" data-show-tab-bar='no' data-theme-id="light" data-default-tab="html,result" data-slug-hash="MWXRJwa" data-user="MattiaNotFound" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/MattiaNotFound/pen/MWXRJwa">
-  STTH Rotation</a> by Mattia (<a href="https://codepen.io/MattiaNotFound">@MattiaNotFound</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<!DOCTYPE html>
+<html lang="en" >
+<body>
+  <script>currentDate = new Date();
+    startDate = new Date(currentDate.getFullYear(), 0, 1);
+    var days = Math.floor((currentDate - startDate) /
+        (24 * 60 * 60 * 1000));
+          
+var weekNumber = Math.ceil(days / 7);
+
+var names  = ["Ludovica", "Mads", "Rebecka", "Kim", "Mattia"];
+
+var i = weekNumber % 5;
+
+var j = i +1;
+if (j == 5) j = 0;
+
+ // Display the calculated result       
+ document.write("This Week (" + weekNumber + "): " + "<b>" + names[i] + "</b>" + "<br>Next Week (" + (weekNumber + 1) + "): " + "<b>" +  names[j]+ "</b>" );
+</script>
+
+</body>
+</html>
+
